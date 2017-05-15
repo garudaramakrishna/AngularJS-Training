@@ -1,0 +1,15 @@
+
+<html ng-app="CatApp">
+    <head>
+       <script type="text/javascript" src="..\Scripts\angular.min.js"></script> 
+       <script type="text/javascript" src="..\Scripts\app.js"></script>
+    <script type="text/javascript" src="..\Controller\CatController.js"></script>
+
+    </head>
+    <body ng-controller="CatAppController">
+        <div ng-repeat="Cat in Cats | limitTo: 1">
+        <img src="..\images\Cat.png" ng-click="CatClick(Cat.CatCnt,$index)">
+        <br><br> Name: {{Cat.name}} <br>  Number of Clicks:  {{Cat.CatCnt}}
+        </div>  
+    </body>
+</html>
